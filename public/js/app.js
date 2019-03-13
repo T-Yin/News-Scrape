@@ -1,11 +1,5 @@
 // Grab the articles as a json
 $.getJSON("/articles", function(data) {
-    // For each one
-    // for (var i = 0; i < data.length; i++) {
-    //   // Display the apropos information on the page
-    //   $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
-    // }
-
     data.forEach(elem => {
         $("#articles").append(`<tr><td>`
         + elem.title
@@ -74,8 +68,6 @@ $.getJSON("/articles", function(data) {
         console.log(data);
         // Empty the notes section
         $("#notes").empty();
-        // $("#titleinput").empty();
-        // $("#bodyinput").empty();
       });
   
     // Also, remove the values entered in the input and textarea for note entry
